@@ -1,0 +1,140 @@
+*{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 568px;
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title{
+    margin-bottom: 60px;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.progress-bar{
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(#2159f3 0deg, #c0d0db 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.progress-bar::before{
+    content: "";
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.value{
+    width: 50px;
+    height: 34px;
+    padding: 6px 0 6px 6px;
+    outline: none;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 34px;
+}
+
+.input-block{
+    display: flex;
+    align-items: center;
+}
+
+.input-block p{
+    margin-left: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 34px;
+}
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+  
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #c0d0db;
+-webkit-transition: .4s;
+transition: .4s;
+}
+  
+.slider:before {
+position: absolute;
+content: "";
+height: 28px;
+width: 28px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2159f3
+}
+  
+  
+input:checked + .slider:before {
+-webkit-transform: translateX(16px);
+-ms-transform: translateX(16px);
+transform: translateX(16px);
+}
+  
+.slider.round {
+border-radius: 34px;
+}
+  
+.slider.round:before {
+border-radius: 50%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+@media(max-width: 568px){
+    main{
+        flex-direction: column;
+    }
+    .wrapper{
+        max-width: 320px;
+    }
+}
+
